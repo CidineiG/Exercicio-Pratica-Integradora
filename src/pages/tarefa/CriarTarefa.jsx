@@ -58,8 +58,8 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
     <Grid container spacing={2}>
       <Card sx={style}>
         <CardHeader
-          title="Tarefas"
-          subheader="Cadastro de Tarefas"
+          title="Vagas"
+          subheader="Cadastro de Vagas"
         /> 
         <CardContent sx={{
           width: '95%',
@@ -68,13 +68,13 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
           <Grid item xs={12}>
             <FormControl fullWidth>
               <Input id="tarefa_titulo" aria-describedby="tarefa_titulo_helper_text" value={tituloTarefa} onChange={e => { setTituloTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_titulo_helper_text">Título da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_titulo_helper_text">Título da Vaga.</FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12}>  
             <FormControl fullWidth>
               <Input id="tarefa_descricao" aria-describedby="tarefa_descricao_helper_text" value={descricaoTarefa} onChange={e => { setDescricaoTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Vaga.</FormHelperText>
             </FormControl>
           </Grid>
           <Grid container spacing={2} mt={1}>
@@ -87,7 +87,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_inicio_helper_text">Início da Seleção.</FormHelperText>
               </FormControl>
             </Grid>  
             <Grid item xs={3}>  
@@ -99,12 +99,12 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_fim_helper_text">Fim da Seleção.</FormHelperText>
               </FormControl>
             </Grid>
             <Grid item xs={3}>  
               <FormControl fullWidth>
-                <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
+                <InputLabel htmlFor="tarefa_recurso">Número de vagas</InputLabel>
                 <Select
                   id="tarefa_recurso"
                   value={recursoTarefa}

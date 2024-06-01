@@ -33,12 +33,12 @@ function createData(
 
 //Definição do array contendo os dados iniciais da listagem de tarefas
 const initialRows = [
-  createData(1, 'Tarefa 1', 'Descrição da Tarefa 1', '2022-01-01', '2022-01-02', 'Concluída', 'Recurso 1'),
-  createData(2, 'Tarefa 2', 'Descrição da Tarefa 2', '2022-01-03', '2022-01-04', 'Em Andamento', 'Recurso 2'),
-  createData(3, 'Tarefa 3', 'Descrição da Tarefa 3', '2022-01-04', '2022-01-05', 'Em Andamento', 'Recurso 3'),
-  createData(4, 'Tarefa 4', 'Descrição da Tarefa 4', '2022-01-05', '2022-01-06', 'Em Andamento', 'Recurso 4'),
-  createData(5, 'Tarefa 5', 'Descrição da Tarefa 5', '2022-01-06', '2022-01-07', 'Em Andamento', 'Recurso 5'),
-  createData(6, 'Tarefa 6', 'Descrição da Tarefa 6', '2022-01-07', '2022-01-08', 'Aguardando', 'Recurso 6'),
+  createData(1, 'Vaga 1', 'Desenvolvedor Back-End', '2022-01-01', '2022-09-02', 'Concluída', '2'),
+  createData(2, 'Vaga 2', 'Desenvolvedor Front-End', '2022-01-10', '2022-09-21', 'Em Andamento', '3'),
+  createData(3, 'Vaga 3', 'Desenvolvedor Web', '2022-01-04', '2022-06-18', 'Em Andamento', '1'),
+  createData(4, 'Vaga 4', 'Programador Full-Stack', '2022-01-12', '2022-06-06', 'Aguardando', '1'),
+  createData(5, 'Vaga 5', 'Desenvolvedor Software', '2022-01-06', '2022-07-28', 'Concluída', '2'),
+
 ];
 
 //Componente ListarTarefa
@@ -85,8 +85,8 @@ const ListarTarefa = () => {
     <>
     <Card>
         <CardHeader
-          title="Tarefas"
-          subheader="Listagem de Tarefas"
+          title="Vagas"
+          subheader="Lista de Vagas"
         /> 
         <CardContent>
             <TableContainer component={Paper}>
@@ -99,7 +99,7 @@ const ListarTarefa = () => {
                     <TableCell align="right">Data de Início</TableCell>
                     <TableCell align="right">Data de Finalização</TableCell>
                     <TableCell align="right">Status</TableCell>
-                    <TableCell align="right">Recurso</TableCell>
+                    <TableCell align="right">Número de Vagas</TableCell>
                     <TableCell align="left"></TableCell>
                     <TableCell align="left"></TableCell>
                 </TableRow>
@@ -134,7 +134,7 @@ const ListarTarefa = () => {
             </TableContainer>
         </CardContent>
         <CardActions>
-            <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
+            <Button size="small" variant="contained" onClick={handleOpen}>Nova Vaga</Button>
             <Button size="small" variant="outlined">Cancelar</Button>
       </CardActions> 
     </Card>
